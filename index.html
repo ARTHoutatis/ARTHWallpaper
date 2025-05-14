@@ -3,65 +3,96 @@
   <head>
     <meta charset="utf-8" />
     <title>ARTH.Wallpaper</title>
-	<style>
-	body {
-	background-image: url("fond-d-ecran-colore-flou-artistique.jpg");
-	background-size: cover; 
-	background-position: center; 
-	background-repeat: no-repeat;
-	background-color: black;
-	color: white;
-	font-family: 'Segoe UI', sans-serif;
-	text-align: center;
-	}
-	
-	 h1 {
-      font-size: 80px;
-      color: white;
-      text-shadow: 0 0 20px blue;
-	  transition: transform 1s ease;
-	}
-	
-	 h1:hover {
-	 transform: scale(0.9);
-	 }
-	
-	 .bloc {
-	 display: inline-block;
-     padding: 80px;
-	 background-color: #1E1E1E;
-	 border-radius: 40px;
-	 }
-	 
-	 .bloc p {
-	 margin-top: -50px;
-	 }
-	
-	 .link {
-	 display: inline-block;
-	 padding: 20px 40px;
-	 background-color: blue;
-	 border-radius: 10px;
-	 color: white;
-	 transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-	 font-size: 20px;
-	 }
-	
-	 .link:hover {
-	 background-color: white;
-	 color: blue;
-	 transform: scale(1.1);
-	 }
-	
-	</style>
- </head>
- <body>
- <br><br><br>
- <div class="bloc">
-  <h1>ARTHWallpaper</h1>
-  <P>Bienvenue sur mon site de fond d'écran</p>
-  <a class="link" href="ARTHWallpaper.html"><strong>SUIVANT</strong></a>
-  </div>
-  
+    <style>
+      body {
+        background-image: url("fond-d-ecran-colore-flou-artistique.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: black;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 80px;
+        color: white;
+        text-shadow: 0 0 20px blue;
+        transition: transform 1s ease;
+      }
+
+      h1:hover {
+        transform: scale(0.9);
+      }
+
+      .bloc {
+        display: inline-block;
+        padding: 80px;
+        background-color: #1E1E1E;
+        border-radius: 40px;
+      }
+
+      .bloc p {
+        margin-top: -50px;
+      }
+
+      .link {
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: blue;
+        border-radius: 10px;
+        color: white;
+        transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        background-color: white;
+        color: blue;
+        transform: scale(1.1);
+      }
+
+      /* Masquer le contenu principal en portrait */
+      @media screen and (orientation: portrait) {
+        .main-content {
+          display: none;
+        }
+
+        .rotate-message {
+          display: block;
+          font-size: 30px;
+          margin-top: 100px;
+          color: white;
+          text-shadow: 0 0 10px red;
+        }
+      }
+
+      @media screen and (orientation: landscape) {
+        .main-content {
+          display: block;
+        }
+
+        .rotate-message {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rotate-message">
+      🔄 Veuillez tourner votre appareil en mode paysage pour continuer.
+    </div>
+
+    <div class="main-content">
+      <br><br><br>
+      <div class="bloc">
+        <h1>ARTHWallpaper</h1>
+        <p>Bienvenue sur mon site de fond d'écran</p>
+        <a class="link" href="ARTHWallpaper.html"><strong>SUIVANT</strong></a>
+      </div>
+    </div>
   </body>
-  </html>
+</html>
