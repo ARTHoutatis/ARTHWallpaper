@@ -1,0 +1,251 @@
+/* Common shared styles for Clipsou Streaming */
+
+/* Base */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color-scheme: light; /* keep light controls regardless of system */
+}
+
+/* Type label mappings via data-type (support attribute on .card-info or on .card) */
+.card .card-info[data-type="film"]::before,
+.card[data-type="film"] .card-info::before { content: 'Film'; }
+.card .card-info[data-type="serie"]::before,
+.card[data-type="serie"] .card-info::before { content: 'Série'; }
+.card .card-info[data-type="série"]::before,
+.card[data-type="série"] .card-info::before { content: 'Série'; }
+.card .card-info[data-type="trailer"]::before,
+.card[data-type="trailer"] .card-info::before { content: 'Trailer'; }
+
+* { box-sizing: border-box; }
+
+a { text-decoration: none; color: inherit; }
+
+/* Visually hidden (for a11y/SEO) */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Theme variables (can be overridden per page) */
+:root {
+  --bg-1: #0b1117;
+  --bg-2: #0e141b;
+  --brand-1: #2B22EE;
+  --brand-2: #6c5ce7;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Navigation (banderole) */
+nav[aria-label="Navigation principale"] {
+  background: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.65));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.logo span { white-space: nowrap; }
+.logo span:nth-of-type(1), .logo span:nth-of-type(2) { color: var(--brand-1); }
+.logo span:nth-of-type(1) { font-weight: 800; }
+.logo span:nth-of-type(2) { margin-left: 6px; font-weight: 300; }
+
+.nav-links { display: flex; gap: 15px; }
+.nav-links a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Cards (base) */
+.card {
+  background: rgba(26,35,50,0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  position: relative;
+}
+.card:hover { transform: scale(1.03); border-color: var(--brand-1); box-shadow: none; }
+
+/* Disable any old overlay watermark: logo now lives in the info bar */
+.card::after { content: none; }
+
+.card img {
+  width: 100%;
+  aspect-ratio: 9/12;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover img { transform: none; }
+
+/* Brand badge (shared across pages) */
+.brand-badge {
+  padding: 7px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.brand-badge img {
+  display: block;
+  width: auto;
+  height: 10px;
+  object-fit: contain;
+}
+
+/* Overlay placement on cards: anchor contains a .card-media wrapper */
+.card .card-media { position: relative; display: block; margin-bottom: 0; }
+.card .card-media .brand-badge {
+  position: absolute;
+  left: 2px; /* slightly closer to the left edge */
+  bottom: 8px; /* inset to avoid corner clipping */
+  margin-top: 0;
+  z-index: 2;
+  pointer-events: none; /* don't block clicks on the card */
+}
+
+/* Prevent global card image rules from cropping the badge logo */
+.card .card-media .brand-badge img {
+  width: auto !important;
+  height: 10px !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+/* Ensure no badge inside popups */
+.fiche-popup .brand-badge { display: none !important; }
+
+.card-info {
+  position: relative;
+  width: 100%;
+  padding: 10px 10px; /* tighter vertical space, same text size */
+  padding-right: 12px; /* no reserved space for logo */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  text-align: left;
+  white-space: nowrap;
+  /* Remove Clipsou logo background on cards */
+  background-image: none;
+}
+/* Default label + rating pattern */
+.card .card-info::before { content: 'Catégorie'; color: #fff; font-weight: 700; font-size: 14px; margin-right: 6px; }
+.card .card-info[data-rating]::after {
+  content: ' ⭐ ' attr(data-rating);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 1;
+  display: inline-block;
+  padding: 1px 4px; /* keep small badge while preserving text size */
+  background-color: rgba(255, 215, 0, 0.18); /* translucent yellow */
+  border-radius: 5px; /* rounded corners */
+}
+
+/* Accessibility and UX */
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: 2px solid rgba(99,102,241,0.9);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(99,102,241,0.25);
+}
+
+* { transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+
+/* Scrollbars */
+html { scrollbar-color: #615d5d #0a0a0a; scrollbar-width: thin; }
+*::-webkit-scrollbar { width: 12px; height: 12px; }
+*::-webkit-scrollbar-track { background: #0a0a0a; }
+*::-webkit-scrollbar-thumb { background: #000000; border-radius: 8px; border: 3px solid transparent; background-clip: padding-box; }
+*::-webkit-scrollbar-thumb:hover { background: #000000; }
+
+/* Mobile common rules */
+@media (max-width: 768px) {
+  /* Tight mobile layout: logo left, actions right, no overflow */
+  nav[aria-label="Navigation principale"] {
+    padding: 6px 8px !important;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    column-gap: 6px;
+  }
+  .logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    font-size: clamp(18px, 5.5vw, 22px);
+    gap: 4px;
+  }
+  .logo img { width: 18px; height: 18px; flex: 0 0 auto; }
+  .logo span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--brand-1);
+    max-width: 75vw;
+  }
+  .nav-links { display: flex; margin-left: auto !important; gap: 6px; }
+}
+
+/* Ultra-small phones: extra tightening */
+@media (max-width: 360px) {
+  nav[aria-label="Navigation principale"] { padding: 10px 12px !important; }
+  .logo { gap: 4px; }
+  .logo img { width: 20px; height: 20px; }
+  .logo span { max-width: 72vw; font-size: 0.95em; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

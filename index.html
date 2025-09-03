@@ -1,94 +1,545 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ARTH.Wallpaper</title>
-    <style>
-      body {
-        background-image: url("fond-d-ecran-colore-flou-artistique.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: black;
-        color: white;
-        font-family: 'Segoe UI', sans-serif;
-        text-align: center;
-      }
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+<meta name="google-site-verification" content="XclXrRNOuNrsDcZjhcADvDdzKN24w63Eja0JB0Xl2jU" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1117">
+<title>Clipsou Streaming</title>
+<meta name="description" content="Regardez des films et séries comme La vie au petit âge, Dédoublement, Jackson Goup, Karma et Alex. Gratuit, rapide et sans inscription.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="canonical" href="https://clipsoustreaming.netlify.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<!-- Preconnects for faster Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Preload critical hero background and UI icon -->
+<link rel="preload" as="image" href="loupe.png">
+<!-- Open Graph -->
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clipsou Streaming">
+<meta property="og:title" content="Clipsou Streaming – Brickfilms et animations en streaming français">
+<meta property="og:description" content="Streaming français de brickfilms et animations. Découvrez La vie au petit âge, Dédoublement, Jackson Goup, Karma, Alex et plus.">
+<meta property="og:url" content="https://clipsoustreaming.netlify.app/">
+<meta property="og:image" content="https://clipsoustreaming.netlify.app/apercu.png">
+<meta property="og:image:alt" content="Clipsou Streaming – sélection de brickfilms et animations">
+<meta property="og:image:type" content="image/png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clipsou Streaming – Brickfilms et animations en streaming français">
+<meta name="twitter:description" content="Streaming français de brickfilms et animations. Gratuit, rapide et sans inscription.">
+<meta name="twitter:image" content="https://clipsoustreaming.netlify.app/apercu.png">
+<!-- JSON-LD Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clipsou Streaming",
+  "url": "https://clipsoustreaming.netlify.app/",
+  "logo": "https://clipsoustreaming.netlify.app/favicon.png",
+  "sameAs": [
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Clipsou Streaming",
+  "url": "https://clipsoustreaming.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://clipsoustreaming.netlify.app/search.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<!-- Fonts for styled popup titles (trimmed to only used families) -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@700&family=Rye&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="common.css">
+ <link rel="stylesheet" href="index.css">
+ </head>
+ <body>
+  <nav aria-label="Navigation principale">
+     <div class="logo">
+     
+         <img src="favicon.png" alt="Logo Clipsou">
+         <span>Clipsou</span>
+         <span>Streaming</span>
+     </div>
 
-      h1 {
-        font-size: 80px;
-        color: white;
-        text-shadow: 0 0 20px blue;
-        transition: transform 1s ease;
-      }
+    <div class="nav-links">
+       <a href="search.html" class="search-link">Recherche</a>
+   </div>
+</nav>
 
-      h1:hover {
-        transform: scale(0.9);
-      }
+<main id="contenu" tabindex="-1">
 
-      .bloc {
-        display: inline-block;
-        padding: 80px;
-        background-color: #1E1E1E;
-        border-radius: 40px;
-      }
+<!-- CAROUSEL HERO SECTION -->
+<div class="carousel-section" role="region" aria-label="Sélection de mises en avant">
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <!-- Slide 1: La vie au petit âge -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">La vie au petit âge</h2>
+                    <div class="carousel-genres">
+                        <span class="carousel-genre-tag">Comédie</span>
+                        <span class="carousel-genre-tag">Familial</span>
+                        <span class="carousel-genre-tag">Aventure</span>
+                    </div>
+                    <p class="carousel-description">
+                        Timmy, un enfant espiègle, nous fait visiter son village dans un monde entièrement construit en briques LEGO. Une aventure familiale pleine d'humour et de tendresse.
+                    </p>
+                    <a href="#film1" class="carousel-btn">Voir la fiche</a>
+                </div>
+            </div>
 
-      .bloc p {
-        margin-top: -50px;
-      }
+            <!-- Slide 2: Dédoublement -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Dédoublement</h2>
+                    <div class="carousel-genres">
+                        <span class="carousel-genre-tag">Thriller</span>
+                        <span class="carousel-genre-tag">Comédie</span>
+                        <span class="carousel-genre-tag">Action</span>
+                    </div>
+                    <p class="carousel-description">
+                        Deux frères identiques, l'un vêtu de blanc et l'autre de noir, s'entendent à merveille… jusqu'à ce que l'un finisse en prison. Un thriller haletant mêlant suspense et moments hilarants.
+                    </p>
+                    <a href="#film2" class="carousel-btn">Voir la fiche</a>
+                </div>
+            </div>
 
-      .link {
-        display: inline-block;
-        padding: 20px 40px;
-        background-color: blue;
-        border-radius: 10px;
-        color: white;
-        transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-        font-size: 20px;
-        text-decoration: none;
-      }
+            <!-- Slide 3: Jackson Goup -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Jackson Goup</h2>
+                    <div class="carousel-genres">
+                        <span class="carousel-genre-tag">Aventure</span>
+                        <span class="carousel-genre-tag">Fantastique</span>
+                        <span class="carousel-genre-tag">Comédie</span>
+                    </div>
+                    <p class="carousel-description">
+                        Un aventurier un peu maladroit traverse des contrées hostiles remplies de créatures féroces. Une aventure épique mêlant humour et fantastique.
+                    </p>
+                    <a href="#film3" class="carousel-btn">Voir la fiche</a>
+                </div>
+            </div>
 
-      .link:hover {
-        background-color: white;
-        color: blue;
-        transform: scale(1.1);
-      }
+            <!-- Slide 4: Alex (Série) -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Alex</h2>
+                    <div class="carousel-genres">
+                        <span class="carousel-genre-tag">Action</span>
+                        <span class="carousel-genre-tag">Comédie</span>
+                        <span class="carousel-genre-tag">Drame</span>
+                    </div>
+                    <p class="carousel-description">
+                        Suivez les aventures captivantes d'Alex dans un univers en briques LEGO. Cette série brickfilm innovante mêle action, humour et émotion.
+                    </p>
+                    <a href="#serie1" class="carousel-btn">Voir la fiche</a>
+                </div>
+            </div>
 
-      /* Masquer le contenu principal en portrait */
-      @media screen and (orientation: portrait) {
-        .main-content {
-          display: none;
-        }
+            <!-- Slide 5: Karma -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Karma</h2>
+                    <div class="carousel-genres">
+                        <span class="carousel-genre-tag">Horreur</span>
+                        <span class="carousel-genre-tag">Mystère</span>
+                        <span class="carousel-genre-tag">Psychologique</span>
+                    </div>
+                    <p class="carousel-description">
+                        Une adolescente victime de harcèlement revient hanter son bourreau. Une spirale de terreur psychologique et de phénomènes paranormaux terrifiants.
+                    </p>
+                    <a href="#film4" class="carousel-btn">Voir la fiche</a>
+                </div>
+            </div>
+        </div>
 
-        .rotate-message {
-          display: block;
-          font-size: 30px;
-          margin-top: 100px;
-          color: white;
-        }
-      }
+        <!-- Indicateurs de slides -->
+        <div class="carousel-indicators" aria-hidden="true">
+            <div class="carousel-indicator" role="button" tabindex="0" aria-label="Aller à la diapositive 1" data-index="0"></div>
+            <div class="carousel-indicator" role="button" tabindex="0" aria-label="Aller à la diapositive 2" data-index="1"></div>
+            <div class="carousel-indicator" role="button" tabindex="0" aria-label="Aller à la diapositive 3" data-index="2"></div>
+            <div class="carousel-indicator" role="button" tabindex="0" aria-label="Aller à la diapositive 4" data-index="3"></div>
+            <div class="carousel-indicator" role="button" tabindex="0" aria-label="Aller à la diapositive 5" data-index="4"></div>
+        </div>
+        <!-- Flèches (mobile uniquement, masquées sur desktop via CSS) -->
+        <div class="carousel-arrows" aria-label="Contrôles du carrousel" role="group">
+            <button class="carousel-arrow prev" aria-label="Diapositive précédente" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="carousel-arrow next" aria-label="Diapositive suivante" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+        </div>
+    </div>
+</div>
 
-      @media screen and (orientation: landscape) {
-        .main-content {
-          display: block;
-        }
+<!-- NEW: Top Rated -->
+<div class="section" id="top-rated">
+    <h2>⭐ Mieux notés</h2>
+    <div class="rail">
+        <!-- Auto-populated by index.js -->
+  </div>
+  </div>
 
-        .rotate-message {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="rotate-message">
-      🔄 Veuillez tourner votre appareil en mode paysage pour continuer.
+<!-- Genre sections are auto-generated by index.js -->
+
+<!-- (Drame section removed; will be auto-created) -->
+
+<!-- (Familial section removed; will be auto-created) -->
+
+<!-- (Horreur section removed; will be auto-created) -->
+
+<!-- (Aventure section removed; will be auto-created) -->
+
+<!-- POPUPS -->
+
+<div id="partenariats" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="partenariats-title">
+  <div class="fiche-content">
+    <a href="javascript:history.back()" class="button close-btn top-right-close" aria-label="Fermer">❌ Fermer</a>
+    <div class="fiche-right" style="padding-left:0;">
+      <h3 id="partenariats-title">🤝 Partenariats</h3>
+      <p>
+        <img src="NOVA.PNG" alt="Logo Nova Stream" style="width:112px;height:112px;display:block;margin:0 0 8px 0;border-radius:4px;">🎬 Bienvenue sur NOVA – Le Meilleur du Streaming Gratuit en VF & VOSTFR ! 🌟
+      </p>
+      <p>
+        Vous cherchez LE site ultime pour regarder films, séries et animés sans limite, gratuitement et en qualité HD, Full HD, voire 4K ? Ne cherchez plus : NOVA est votre nouvelle destination streaming incontournable !
+      </p>
+      <p>
+        <a href="https://nova-stream.live/" target="_blank" rel="noopener noreferrer" class="button">🌐 Ouvrir Nova Stream</a>
+      </p>
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 16px 0;">
+      <p>
+        <img src="CineHelp.png" alt="Logo CineHelp" style="width:128px;height:128px;display:block;margin:0 0 8px 0;border-radius:4px;">🎬 Bienvenue sur CineHelp – L’univers du cinéma collaboratif ! ⭐
+      </p>
+      <p>
+        Tu veux créer un film, échanger avec des passionnés ou trouver des partenaires de tournage ? CineHelp te permet de partager tes projets, apprendre l’audiovisuel et rejoindre une communauté dynamique, débutants comme pros.
+      </p>
+      <p>
+        <a href="https://discord.gg/qJ44ksPPQT" target="_blank" rel="noopener noreferrer" class="button">🌐 Rejoindre CineHelp</a>
+      </p>
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 16px 0;">
+      <p>
+        <img src="Cineclub.png" alt="Logo Cinéclub" style="width:128px;height:128px;display:block;margin:0 0 8px 0;border-radius:4px;">🎬 Bienvenue sur Cinéclub – Le serveur des vrais passionnés de cinéma ! ⭐
+      </p>
+      <p>
+        Tu aimes le cinéma et veux échanger avec des cinéphiles qui connaissent leurs classiques (et leurs nanars) ? Rejoins Cinéclub pour débattre, partager tes critiques et participer à des événements réguliers : soirées films, jeux, concours, et plus encore !
+      </p>
+      <p>
+        <a href="https://discord.gg/KGtUwpc2yj" target="_blank" rel="noopener noreferrer" class="button">🌐 Rejoindre Cinéclub</a>
+      </p>
+      
+    </div>
+  </div>
+  
+</div>
+<div id="film1" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film1-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="La1.jpg" alt="Image du film La vie au petit âge" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film1-title">La vie au petit age</h3>
+            <div class="rating-genres">
+                <div class="stars">★2.5/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Comédie</span>
+                    <span class="genre-tag">Familial</span>
+                    <span class="genre-tag">Aventure</span>
+                </div>
+            </div>
+            <p>Timmy, un enfant espiègle, nous fait visiter son village dans un monde entièrement construit en briques LEGO. Mais chaque coin de rue réserve son lot de gags et de surprises ! Une aventure familiale pleine d'humour et de tendresse qui ravira petits et grands.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=XtqzuhtuH2E" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film2" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film2-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Dé1.jpg" alt="Image du film Dédoublement" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film2-title">DEDOUBLEMENT</h3>
+            <div class="rating-genres">
+                <div class="stars">★4/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Thriller</span>
+                    <span class="genre-tag">Comédie</span>
+                    <span class="genre-tag">Action</span>
+                </div>
+            </div>
+            <p>Deux frères identiques, l'un vêtu de blanc et l'autre de noir, s'entendent à merveille… jusqu'à ce que l'un finisse en prison. Dans l'univers de Minecraft, ce thriller haletant mêle comédie, suspense et évasion.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=gfbiTpqQDY0" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film3" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film3-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Ja1.jpg" alt="Image du film Jackson Goup" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film3-title">Jackson Goup</h3>
+            <div class="rating-genres">
+                <div class="stars">★3.5/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Aventure</span>
+                    <span class="genre-tag">Fantastique</span>
+                    <span class="genre-tag">Comédie</span>
+                </div>
+            </div>
+            <p>Un aventurier un peu maladroit traverse des contrées hostiles remplies de créatures féroces. Tourné en prise de vue réelle (live action), ce périple épique mêle humour et fantastique pour un voyage plein de surprises.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=VUqwvqQ51sg" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="serie1" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="serie1-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Al.jpg" alt="Image de la série Alex" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="serie1-title"><span class="al">AL</span><span class="ex">EX</span></h3>
+            <div class="rating-genres">
+                <div class="stars">★3/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Comédie</span>
+                    <span class="genre-tag">Familial</span>
+                </div>
+            </div>
+            <p>Suivez les aventures captivantes d'Alex, un personnage attachant dans un univers en briques LEGO. Cette série brickfilm innovante mêle action, humour et émotion dans des épisodes soigneusement réalisés qui plairont à tous les âges.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/playlist?list=PLljfI9MJr5K3O2tycHZBTUd125kT7Radf" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder la série</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="serie2" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="serie2-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Law.jpg" alt="Image de la série Lawless Legend" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="serie2-title">Lawless Legend</h3>
+            <div class="rating-genres">
+                <div class="stars">★3/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Western</span>
+                    <span class="genre-tag">Comédie</span>
+                    <span class="genre-tag">Action</span>
+                </div>
+            </div>
+            <p>Plongez dans l'univers du Far West à travers cette série brickfilm unique ! Cowboys en briques LEGO, duels au soleil couchant et esthétique VHS nostalgique : cette série réinvente le western avec humour dans un style rétro irrésistible.</p>
+            <div class="button-group">
+                <a href="https://youtube.com/playlist?list=PLljfI9MJr5K2Li687G4dOxjfyDQkIfJn3&si=FQ0ImMc9j-6wvtRk" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder la série</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film4" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film4-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Ka1.jpg" alt="Image du film Karma" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film4-title">Karma</h3>
+            <div class="rating-genres">
+                <div class="stars">★2.5/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Horreur</span>
+                    <span class="genre-tag">Mystère</span>
+                    <span class="genre-tag">Psychologique</span>
+                </div>
+            </div>
+            <p>Victime de harcèlement scolaire, une adolescente met fin à ses jours. Réalisé en prise de vue réelle, ce récit surnaturel suit le retour d'un esprit tourmenté qui hante son bourreau et le plonge dans une spirale de terreur.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=p79g08Igceo" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film5" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film5-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Ba1.jpg" alt="Image du trailer Batman" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film5-title"><span class="trailer-word">Trailer</span> <span class="batman-word">BATMAN</span></h3>
+            <div class="rating-genres">
+                <div class="genres">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Drame</span>
+                    <span class="genre-tag">Super-héros</span>
+                </div>
+            </div>
+            <p>Un nouveau trailer de Batman, sombre et intense, réimaginé dans l'univers Minecraft. Découvrez des premières images qui redéfinissent le chevalier noir avec une approche moderne et spectaculaire.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=SzbqZNObLNU" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film6" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film6-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Ur1.jpg" alt="Image du film Urbanos City" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film6-title"><span class="urbanos">URBANOS</span> <span class="city">city</span></h3>
+            <div class="rating-genres">
+                <div class="stars">★2/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Comédie</span>
+                    <span class="genre-tag">Familial</span>
+                    <span class="genre-tag">Enfants</span>
+                </div>
+            </div>
+            <p>Le Noob vous présente, avec humour, la ville d'Urbanos créée sur Minecraft.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=ZcnWsRXHLic" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="film7" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="film7-title">
+    <div class="fiche-content landscape-layout">
+        <div class="fiche-left">
+            <img src="Bac1.png" alt="Image du film Backrooms Urbanos" class="landscape" decoding="async" loading="lazy">
+        </div>
+        <div class="fiche-right">
+            <h3 id="film7-title"><span class="backrooms-vhs">Backrooms</span> <span class="urbanos-svg" role="img" aria-label="URBANOS">
+                <svg class="urbanos-logo" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <linearGradient id="urbGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="800" y2="0" gradientTransform="rotate(85 400 100)">
+                      <!-- BLUE solid then soft blend to GREEN -->
+                      <stop offset="0%"   stop-color="#45A4F3"/>
+                      <stop offset="42%"  stop-color="#45A4F3"/>
+                      <!-- Soft blend BLUE→GREEN (42–44%) -->
+                      <stop offset="44%"  stop-color="#20FC06"/>
+                      <!-- GREEN solid then soft blend to ORANGE -->
+                      <stop offset="51%"  stop-color="#20FC06"/>
+                      <!-- Soft blend GREEN→ORANGE (51–53%) -->
+                      <stop offset="53%"  stop-color="#FD7208"/>
+                      <!-- ORANGE solid -->
+                      <stop offset="100%" stop-color="#FD7208"/>
+                    </linearGradient>
+                    <filter id="urbShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feOffset dx="0" dy="6"/>
+                      <feGaussianBlur stdDeviation="2" result="blur"/>
+                      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.38 0"/>
+                      <feBlend in2="SourceGraphic" mode="normal"/>
+                    </filter>
+                  </defs>
+                  <g filter="url(#urbShadow)">
+                    <text x="50%" y="72%" text-anchor="middle" font-family="'Luckiest Guy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" font-size="180" font-weight="800" fill="url(#urbGradient)" stroke="rgba(0,0,0,0.35)" stroke-width="6" paint-order="stroke" letter-spacing="2">URBANOS</text>
+                  </g>
+                </svg>
+            </span></h3>
+            <div class="rating-genres">
+                <div class="stars">★3.5/5</div>
+                <div class="genres">
+                    <span class="genre-tag">Horreur</span>
+                    <span class="genre-tag">Mystère</span>
+                    <span class="genre-tag">Ambience</span>
+                </div>
+            </div>
+            <p>Après avoir chuté à travers le sol, Noob se retrouve piégé dans les Backrooms : un dédale sans fin de couloirs jaunâtres où bourdonnent les néons et où rôdent d’étranges présences. Entre zones instables, anomalies hostiles et rencontres inattendues, chaque pas le rapproche d’une vérité inquiétante. Court-métrage réalisé à l’occasion d’une mise à jour du serveur Minecraft Urbanos.</p>
+            <div class="button-group">
+                <a href="https://www.youtube.com/watch?v=b1BSjegjM_s" target="_blank" rel="noopener noreferrer" class="button">▶ Regarder</a>
+                <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
+            </div>
+        </div>
+    </div>
     </div>
 
-    <div class="main-content">
-      <br><br><br>
-      <div class="bloc">
-        <h1>ARTHWallpaper</h1>
-        <p>Bienvenue sur mon site de fond d'écran</p>
-        <a class="link" href="https://arthoutatis.github.io/ARTHWallpaper/ARTHWallpaper.html"><strong>SUIVANT</strong></a>
+<!-- Popup: Proposer un film -->
+<div id="submit-film" class="fiche-popup" role="dialog" aria-modal="true" aria-labelledby="submit-film-title">
+  <div class="fiche-content">
+    <div class="fiche-right" style="padding-left:0;">
+      <h3 id="submit-film-title">Proposez vos films sur notre site 🎬</h3>
+      <p>Vous souhaitez mettre en avant vos créations ? Rien de plus simple !</p>
+      <p>Il vous suffit de nous envoyer :</p>
+      <p>
+        ➤ Une affiche (format 9/12)<br>
+        ➤ Une image (format 16/9)<br>
+        ➤ si le film est tourné en prise de vue réelle, en LEGO ou réalisé dans un jeu vidéo<br>
+        ➤ le logo de votre studio (fond transparent si possible)<br>
+        ➤ 3 genres (exemple : Action, Comédie, Thriller)<br>
+        ➤ Le lien YouTube de votre film
+      </p>
+      <p>👉 C’est 100% gratuit !</p>
+      <p>En échange, nous vous demanderons simplement un petit coup de pouce : partager une pub de notre site sur vos réseaux sociaux 💙</p>
+      <p>📩 Intéressé(e) ? Contactez-moi sur Discord : <strong>arth.d.i.s.c.o.r.d</strong><br>
+      ou sinon par notre Email <a href="mailto:roxxormister@gmail.com">roxxormister@gmail.com</a></p>
+      <div class="button-group">
+        <a href="javascript:history.back()" class="button close-btn">❌ Fermer</a>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+
+</main>
+  <footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      Clipsou Streaming depuis 2019<br><br>
+      <span>Créateur : Mroxxor</span><br>
+      <span>Développeur : ARTH</span>
+    </div>
+    <div class="footer-actions">
+        <a href="#submit-film" class="button" style="margin-left: 12px; border-radius: 8px; padding: 10px 16px;">🎬 ajouter votre film</a>
+        <a href="#partenariats" class="button partner-link" style="margin-left: 12px; border-radius: 8px; padding: 10px 16px;">🤝 partenariats</a>
+        <a href="https://discord.gg/9ekddx9Hqs" target="_blank" rel="noopener noreferrer" class="button discord-btn" aria-label="Rejoindre notre Discord" style="margin-left: 12px; border-radius: 8px; padding: 10px 16px;">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+            <path d="M20.317 4.369A19.791 19.791 0 0 0 16.558 3c-.2.36-.43.85-.59 1.23a18.27 18.27 0 0 0-4.936 0c-.17-.39-.4-.87-.6-1.23-1.37.25-2.73.68-3.997 1.27C3.76 8.053 3.06 11.64 3.3 15.18c1.67 1.25 3.29 2.01 4.87 2.51.39-.54.74-1.12 1.04-1.73-.57-.22-1.11-.49-1.63-.8.14-.1.27-.21.4-.32 3.14 1.47 6.54 1.47 9.65 0 .13.11.26.22.4.32-.52.31-1.07.58-1.64.8.3.61.65 1.19 1.04 1.73 1.58-.5 3.2-1.26 4.87-2.51.4-5.37-.67-8.9-2.98-10.81ZM9.68 13.86c-.94 0-1.7-.86-1.7-1.92 0-1.05.75-1.92 1.7-1.92.94 0 1.7.86 1.7 1.92 0 1.05-.76 1.92-1.7 1.92Zm4.64 0c-.94 0-1.7-.86-1.7-1.92 0-1.05.76-1.92 1.7-1.92s1.7.86 1.7 1.92c0 1.05-.76 1.92-1.7 1.92Z"/>
+          </svg>
+          <span class="sr-only">Discord</span>
+        </a>
+        <a href="https://www.youtube.com/@clipsoustudio" target="_blank" rel="noopener noreferrer" class="button youtube-btn" aria-label="Voir notre chaîne YouTube" style="margin-left: 12px; border-radius: 8px; padding: 10px 16px;">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+            <path d="M23.498 6.186a3.002 3.002 0 0 0-2.116-2.125C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.382.561A3.002 3.002 0 0 0 .502 6.186C0 8.06 0 12 0 12s0 3.94.502 5.814a3.002 3.002 0 0 0 2.116 2.125C4.484 20.5 12 20.5 12 20.5s7.516 0 9.382-.561a3.002 3.002 0 0 0 2.116-2.125C24 15.94 24 12 24 12s0-3.94-.502-5.814ZM9.75 15.5v-7l6 3.5-6 3.5Z"/>
+          </svg>
+          <span class="sr-only">YouTube</span>
+        </a>
+     </div>
+   </div>
+ </footer>
+ <script src="index.js" defer></script>
+ </body>
+ </html>
